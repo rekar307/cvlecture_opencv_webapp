@@ -34,7 +34,6 @@ def dface(request):
             post.save()
 
             imageURL = settings.MEDIA_URL + form.instance.document.name
-
             opencv_dface(settings.MEDIA_ROOT_URL + imageURL)
 
             return render(request, 'opencv_webapp/dface.html', {'form':form, 'post':post})

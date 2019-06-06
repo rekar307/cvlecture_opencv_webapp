@@ -23,8 +23,8 @@ def opencv_dface(path):
             for (ex, ey, ew, eh) in eyes:
                 cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 
-        dst = cv2.resize(img, dsize=(0, 0), fx=0.3, fy=0.3, interpolation=cv2.INTER_LINEAR)
-        cv2.imwrite(path, dst)
+        #dst = cv2.resize(img, dsize=(0, 0), fx=0.3, fy=0.3, interpolation=cv2.INTER_LINEAR)
+        cv2.imwrite(path, img)
     else:
         print('something error')
         print(path)
